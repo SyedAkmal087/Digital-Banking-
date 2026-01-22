@@ -13,3 +13,251 @@
   --font-weight-regular: 400;
   --font-weight-bold: 700;
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body);
+  color: var(--blue-950);
+}
+.app-container {
+  width: 100%;
+  height: 100%;
+  padding-inline: 1rem;
+}
+.header {
+  color: var(--white);
+}
+.header-sections {
+  max-width: 1110px;
+  margin: 0 auto;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+.leftbox img {
+  max-width: 150px;
+  width: 100%;
+}
+
+.middle-box {
+  display: flex;
+  gap: 1.5rem; /* Space between links */
+  height: 100%;
+  align-items: center;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 4px solid transparent; /* Prepare for hover effect */
+}
+
+.nav-links:hover {
+  color: var(--blue-950);
+  border-bottom-color: var(--green-500);
+}
+
+.header-btn {
+  border: none;
+  background: linear-gradient(90deg, var(--green-500), var(--cyan-400));
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.header-btn:hover {
+  opacity: 0.8;
+}
+
+.hero-section {
+  display: flex;
+  height: 90vh;
+  background-color: var(--white);
+  padding: 1rem;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+.hero-leftbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 3rem;
+  width: 50%;
+}
+.heading1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 500;
+}
+.para1 {
+  color: var(--gray-600);
+  width: 70%;
+}
+
+.hero-rightbox {
+  width: 50%;
+}
+.right-box-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-block: hidden;
+}
+.heroimg1 {
+  width: 100%;
+}
+.heroimg2 {
+  top: -5rem;
+  right: 0;
+  position: absolute;
+  width: 100%;
+}
+.cards-section {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1110px;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-inline: 1rem;
+  padding-block: 3rem;
+}
+.upperbox h1 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-block: 1rem;
+  font-weight: 500;
+}
+.upperbox p {
+  color: var(--gray-600);
+}
+.lowerbox {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.cards {
+  background-color: var(--gray-100);
+}
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+}
+.card img {
+  height: 60px;
+  width: auto;
+}
+.card h1 {
+  font-size: 1.5rem;
+  margin-block: 1rem;
+  font-weight: 500;
+}
+.card p {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+}
+.latestcard {
+  border-radius: 1rem;
+  height: 450px;
+  background-color: white;
+  gap: 1rem;
+}
+.cardupperbox {
+  height: 50%;
+  width: 100%;
+}
+.cardupperbox img {
+  height: 100%;
+  width: 100%;
+}
+.cardlowerbox {
+  height: 50%;
+}
+.cardlowerbox h1 {
+  font-size: 1.2rem;
+  margin-block: 0.5rem;
+}
+.footer-section {
+  background-color: var(--blue-950);
+}
+.footer {
+  max-width: 1110px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-block: 3rem;
+}
+.footerrightbox {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.socialicons > img {
+  margin-right: 0.5rem;
+}
+.footerleftbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.footerleftbox a {
+  text-decoration: none;
+  color: gray;
+  font-size: 0.8rem;
+}
+.footerleftbox button {
+  max-width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .hero-section {
+    max-height: 80vh;
+    height: 100%;
+  }
+  .hero-leftbox {
+    gap: 2rem;
+  }
+  .heading1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .para1 {
+    font-size: 0.8rem;
+  }
+  .card {
+    min-width: 200px;
+  }
+  .upperbox h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .card h1 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .card p {
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+}
